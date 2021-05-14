@@ -1,0 +1,10 @@
+mkdir Webpack-DocsParctice
+cd Webpack-DocsParctice
+npm init -y
+npm install webpack webpack-cli --save-dev
+Create index.html and index.js
+Package: "private": true
+Create a folder call dist and move the index.html in there
+npm install --save lodash
+you can run: npx webpack
+    or add in package: "start": "webpack"
