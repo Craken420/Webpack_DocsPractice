@@ -8,6 +8,12 @@ Create a folder call dist and move the index.html in there
 npm install --save lodash
 you can run: npx webpack
     or add in package: "start": "webpack"
+
 npm install --save-dev style-loader css-loader
-npm install --save-dev csv-loader xml-loader
-npm install toml yamljs json5 --save-dev
+
+inputs:
+    npm install --save-dev csv-loader xml-loader
+    npm install toml yamljs json5 --save-dev
+
+outputs:
+    
