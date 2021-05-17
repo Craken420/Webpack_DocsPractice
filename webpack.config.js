@@ -8,6 +8,9 @@ module.exports = {
     print: './src/print.js'
   },
   devtool: 'inline-source-map', // Rastrear de que archivo viene el error.
+  devServer: {
+    contentBase: './dist',
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Development',
