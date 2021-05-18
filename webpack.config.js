@@ -4,8 +4,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    index: './src/index.js',
-    print: './src/print.js'
+    index: {
+      import: './src/index.js',
+      dependOn: 'shared'
+    },
+    print: {
+      import: './src/print.js',
+      dependOn: 'shared'
+    },
+    shared: 'lodash'
   },
   devtool: 'inline-source-map', // Track the error line in file
   devServer: {
@@ -22,5 +29,8 @@ module.exports = {
     clean: true, // Clean the dist folder
     publicPath: '/'
       // webpack-dev-middleware: make sure files are served correctly on localhost:3000
+  },
+  optimization: {
+    runtimeChunk: 'single' // use multiple entry points on a single HTML page
   }
 };
